@@ -63,3 +63,6 @@ This ASP.NET MVC CRUD operations system is designed to facilitate Create, Read, 
 
 ## Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests for any enhancements or bug fixes.
+
+## Contact
+For any questions or support, please contact [Ahmed Elsheekh](mailto:elsheekh418@gmail.com).
