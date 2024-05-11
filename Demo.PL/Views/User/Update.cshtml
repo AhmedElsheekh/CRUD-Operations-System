@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+@model UserViewModel
+
+<form asp-action="Update">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label class="col-for-label" asp-for="@Model.Username"></label>
+        <input asp-for="@Model.Username" class="form-control"/>
+        <span asp-validation-for="@Model.Username" class="text-danger"></span>
+    </div>
+    <input asp-for="@Model.Id" type="hidden"/>
+    <input asp-for="@Model.Email" type="hidden"/>
+    <input type="submit" value="Save" class="btn btn-primary"/>
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+
+
+
+@section Scripts{
+        <partial name="_ValidationScriptsPartial" />
+}
+

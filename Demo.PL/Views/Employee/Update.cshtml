@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+@model EmployeeViewModel;
+
+<form asp-action="Update" enctype="multipart/form-data">
+    <partial name="PartialViews/CreateOrUpdatePartialView" />
+    <input type="submit" value="Update" class="btn btn-success"/>
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</form>
+

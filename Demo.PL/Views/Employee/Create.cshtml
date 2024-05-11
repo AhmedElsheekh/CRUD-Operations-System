@@ -1,0 +1,14 @@
+﻿@*@model Employee;*@
+@{
+    ViewData["Title"] = "Create";
+    //var departments = new SelectList(ViewBag.Departments, "Id", "Name");
+}
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <partial name="PartialViews/CreateOrUpdatePartialView" />
+    <input type="submit" value="Add" class="btn btn-primary"/>
+    <a asp-action="Index" class="btn btn-light">Back To Employee List</a>
+</form>
+
+
+

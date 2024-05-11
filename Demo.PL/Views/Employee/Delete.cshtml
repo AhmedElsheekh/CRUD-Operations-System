@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<form asp-action="Delete">
+    <partial name="PartialViews/DetailsDeletePartialView" />
+    <input type="submit" value="Confirm Delete" class="btn btn-danger"/>
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+

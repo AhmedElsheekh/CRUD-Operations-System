@@ -1,0 +1,27 @@
+﻿@model DepartmentViewModel;
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form asp-action="Delete">
+    <div class="form-group" >
+    <label asp-for="@Model.Id" class="col-for-label"></label>
+    <input asp-for="@Model.Id" class="form-control" readonly />
+    </div>
+    <div>
+        <label asp-for="@Model.Name" class="col-for-label"></label>
+        <input asp-for="@Model.Name" class="form-control" readonly />
+    </div>
+    <div>
+        <label asp-for="@Model.Code" class="col-for-label"></label>
+        <input asp-for="@Model.Code" class="form-control" readonly />
+    </div>
+    <div>
+        <label asp-for="@Model.CreateAt" class="col-for-label"></label>
+        <input asp-for="@Model.CreateAt" class="form-control" readonly />
+    </div>
+
+    <input type="submit" value="Confirm Delete" class="btn btn-primary"/>
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+

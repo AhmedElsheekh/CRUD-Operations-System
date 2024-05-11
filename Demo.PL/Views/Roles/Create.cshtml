@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model ApplicationRole
+
+<form asp-action="Create">
+    <partial name="PartialViews/CreateEditPartialView" model="@Model"/>
+    <input type="submit" value="Add" class="btn btn-primary"/>
+    <a asp-action="Index" class="btn btn-light">Back To Employee List</a>
+</form>
+

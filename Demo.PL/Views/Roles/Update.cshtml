@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+@model ApplicationRole
+
+<h1>Update Role</h1>
+<br />
+
+<form asp-action="Update">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label class="col-for-label" asp-for="@Model.Name"></label>
+        <input asp-for="@Model.Name" class="form-control"/>
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+    </div>
+
+    <br />
+    <a asp-action="AddOrRemoveUser" asp-route-roleId="@Model.Id" class="btn btn-success">Add Or Remove User</a>
+    <br />
+    <br />
+
+    <input type="submit" value="Save" class="btn btn-primary"/>
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+
+
+
+@section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+}
+

@@ -1,0 +1,55 @@
+﻿@{
+    var departments = new SelectList(ViewBag.Departments, "Id", "Name");
+}
+
+@model EmployeeViewModel;
+
+<div>
+    <label class="col-for-label" asp-for="@Model.Name"></label>
+    <input asp-for="@Model.Name" class="form-control"/>
+    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+</div>
+<div>
+    <label class="col-for-label" asp-for="@Model.Address"></label>
+    <input asp-for="@Model.Address" class="form-control"/>
+    <span asp-validation-for="@Model.Address" class="text-danger"></span>
+</div>
+<div>
+    <label class="col-for-label" asp-for="@Model.Salary"></label>
+    <input asp-for="@Model.Salary" class="form-control"/>
+    <span asp-validation-for="@Model.Salary" class="text-danger"></span>
+</div>
+    <div>
+    <label class="col-for-label" asp-for="@Model.Email"></label>
+    <input asp-for="@Model.Email" class="form-control"/>
+    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+</div>
+<div>
+    <label class="col-for-label" asp-for="@Model.HireDate"></label>
+    <input asp-for="@Model.HireDate" class="form-control"/>
+    <span asp-validation-for="@Model.HireDate" class="text-danger"></span>
+</div>
+<div>
+    <label asp-for="@Model.DepartmentId" class="col-for-label"></label>
+    <select asp-for="@Model.DepartmentId" asp-items="@departments" class="form-control">
+        <option>Select Department</option>
+    </select>
+    <span asp-validation-for="@Model.DepartmentId" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="@Model.Image" class="col-for-label"></label>
+    <input type="file" asp-for="@Model.Image" class="form-control"/>
+</div>
+<div>
+    <input asp-for="@Model.IsActive" class="checkbox"/>
+    <label class="col-for-label">Is Active</label>
+    <span asp-validation-for="@Model.IsActive" class="text-danger"></span>
+</div>
+<div>
+    <input asp-for="@Model.ImageUrl" class="form-control" hidden/>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
